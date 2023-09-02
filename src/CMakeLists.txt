@@ -1,0 +1,2 @@
+add_subdirectory(main_program)
+add_subdirectory(raycommon)
