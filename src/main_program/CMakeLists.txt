@@ -4,6 +4,7 @@ target_link_libraries(
   ray
   PRIVATE ray::ray_options
           ray::ray_warnings
+          ray::ray_configured
 )
 
 target_link_system_libraries(

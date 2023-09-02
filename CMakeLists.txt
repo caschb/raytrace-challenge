@@ -36,9 +36,11 @@ string(
 
 target_compile_features(ray_options INTERFACE cxx_std_${CMAKE_CXX_STANDARD})
 
-
 add_library(ray::ray_options ALIAS ray_options)
 add_library(ray::ray_warnings ALIAS ray_warnings)
+add_library(ray_configured INTERFACE)
+target_include_directories(ray_configured INTERFACE ${CMAKE_BINARY_DIR}/configured_files/include/)
+add_library(ray::ray_configured ALIAS ray_configured)
 add_subdirectory(configured_files)
 add_subdirectory(src)
 
